@@ -1,0 +1,219 @@
+$color_1: inherit;
+$color_2: white;
+$color_3: #9356dc;
+$color_4: transparent;
+$color_5: #FF79DA;
+$font-family_1: "Roboto", sans-serif;
+$font-family_2: shrikhand;
+$background-color_1: rgba(255, 255, 255, 0.8);
+$background-color_2: #F3F3F3;
+$background-color_3: #9356dc;
+$background-color_4: #d5d5d5;
+$background-color_5: #99E2D0;
+$background-color_6: black;
+
+/* Animation @keyframes pour l'apparition */
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+/* Rendre visible */
+		transform: translateY(0);
+/* Réinitialiser la translation */
+	}
+}
+/* Définir des délais d'animation pour chaque article */
+/*******TABLETTE********/
+
+.nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+    .nav__icon {
+        position: absolute;
+        left: 23px;
+        font-size: 20px;
+    }
+    .nav__logo {
+        height: 22px;
+    }
+}
+
+
+.main__div {
+	position: relative;
+	width: 100%;
+    @media all and (min-width: 768px) {
+        position: relative;
+		width: 100%;
+    }
+    .main__bigpicture {
+        position: absolute;
+        top: -220px;
+        height: 258px;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+        @media all and (min-width: 767.98px) {  
+            position: absolute;
+            top: -343px;
+            height: 383px;
+            width: 100%;
+            object-fit: cover;
+            z-index: 1; 
+        }
+    }
+}
+.main__section {
+	position: relative;
+	margin-top: 220px;
+	background-color: $background-color_2;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	padding: 50px 20px;
+	z-index: 2;
+    @media all and (min-width: 767.98px) {
+        position: relative;
+		margin-top: 343px;
+		max-width: 1024px;
+		background-color: $background-color_2;
+		border-top-left-radius: 40px;
+		border-top-right-radius: 40px;
+		padding: 40px 16px;
+		z-index: 2;
+		margin-left: auto;
+		margin-right: auto;
+    }
+    .main__section__title {
+        position: relative;
+        align-items: center;
+        width: 100%;
+    }
+    .main__title {
+        font-family: $font-family_1;
+        font-weight: lighter;
+        padding: 0;
+        margin-bottom: 37px;
+        width: 70%;
+        @media all and (min-width: 767.98px) {
+            width: 62%;
+            text-align: right;
+        }
+    }
+    .main__like {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        @media all and (min-width: 767.98px) {
+            position: absolute;
+            right: 34%;
+        }
+        .button__like {
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+    }
+}
+
+
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 40px;
+    .menu__title {
+        border-bottom: solid 3px #99E2D0;
+        padding-bottom: 9px;
+        width: 40px;
+    }
+}
+.menu__card {
+	background-color: $background-color_1;
+	border-radius: 15px;
+	gap: 12px;
+	overflow: hidden;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeIn 0.5s forwards;
+	h3 {
+		margin: 0;
+	}
+	&:hover {
+		.fa-circle-check {
+			transform: translateX(0);
+		}
+		.card__prix {
+			transform: translateX(-60px);
+		}
+	}
+	&:nth-child(2) {
+		animation-delay: 0.3s;
+	}
+	&:nth-child(3) {
+		animation-delay: 0.5s;
+	}
+	&:nth-child(4) {
+		animation-delay: 0.7s;
+	}
+	&:nth-child(5) {
+		animation-delay: 0.9s;
+	}
+}
+.card__text {
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	gap: 12px;
+	width: 100%;
+    .card__text--left {
+        display: inline-block;
+        align-items: center;
+        flex-direction: column;
+        justify-content: left;
+        width: 80%;
+        padding: 12px;
+        p {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+    .card__text--right {
+        display: flex;
+        position: relative;
+        justify-content: right;
+        align-items: end;
+        width: 15%;
+        h3 {
+            font-size: 14px;
+        }
+    }
+    .card__prix {
+        padding-right: 16px;
+        padding-bottom: 16px;
+        transition: transform 0.5s ease-in-out;
+    }
+    .fa-circle-check {
+        position: absolute;
+        padding: 24px 20px;
+        background-color: $background-color_5;
+        color: $color_2;
+        font-size: 20px;
+        transform: translateX(60px);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+
+.main__cta {
+	.cta {
+		margin: 0;
+		padding: 16px 49px;
+	}
+	display: flex;
+	justify-content: center;
+}
+

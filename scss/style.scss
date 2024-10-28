@@ -1,0 +1,392 @@
+$color_1: inherit;
+$color_2: white;
+$color_3: #9356dc;
+$color_4: transparent;
+$color_5: #FF79DA;
+$font-family_1: "Roboto", sans-serif;
+$font-family_2: shrikhand;
+$background-color_1: rgba(255, 255, 255, 0.8);
+$background-color_2: #F3F3F3;
+$background-color_3: #9356dc;
+$background-color_4: #d5d5d5;
+$background-color_5: #99E2D0;
+$background-color_6: black;
+
+$shadow-light_cta: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+/* Animation de rotation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* Animation de disparition */
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+/* Styles pour le contenu principal */
+/* Affiche le contenu principal après le fadeOut du loader */
+/****BTN*****/
+/******Fonctionnement****/
+/********Restaurants*****/
+/* Cache la checkbox */
+/* Lorsque la checkbox est cochée, on inverse les opacités des icônes */
+/*******FOOTER******/
+/*********DESTOCK**********/
+/********Tablette********/
+* {
+	font-family: $font-family_1;
+}
+
+a {
+	text-decoration: none;
+	color: $color_1;
+}
+body,
+h1,
+p,
+h4 {
+    margin: 0; /* Enlève toutes les marges par défaut */
+}
+body {
+    padding: 0;
+}
+
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $background-color_1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	animation: fadeOut 3s forwards;
+	&:target {
+		+ {
+			display: block;
+		}
+	}
+}
+.loader__spinner {
+	border: 8px solid rgba(255, 255, 255, 0.3);
+	border-top: 8px solid #9356dc;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	animation: spin 1s linear infinite;
+}
+
+main {
+	width: 100%;
+	min-width: 320px;
+}
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 63px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	margin-bottom: 5px;
+    .header__logo{
+        height: 30px;
+    }
+}
+
+.searchbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: $background-color_2;
+	box-shadow: $shadow-light_cta;
+	height: 49px;
+	margin-bottom: 10px;
+    .searchbar__text {
+        border: none;
+        font-size: 16px;
+        padding-left: 10px;
+        background-color: $background-color_2;
+        width: 16ch;
+    }
+}
+
+.explorer {
+	text-align: center;
+	background-color: $background-color_2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    .explorer__maintitle {
+        padding-top: 44px;
+        padding-bottom: 22px;
+        width: 60%;
+        @media all and (min-width: 768px) {
+            padding-top: 44px;
+            padding-bottom: 22px;
+            width: 100%;;
+        }
+
+    }
+    .explorer__text {
+        width: 70%;
+        @media all and (min-width: 768px){
+            width: 110%;}
+    }
+    
+}
+.cta {
+    background: linear-gradient($color_5, $color_3);
+    color: $color_2;
+    border-radius: 50px;
+    padding: 15px 23px;
+    box-shadow: $shadow-light_cta;
+    overflow: hidden;
+    margin-bottom: 57px;
+    margin-top: 27px;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.88;
+        box-shadow: 0 4px 10px 0 #afafaf;
+    }
+}
+
+.section{
+    @media all and (min-width: 1025px) {
+        padding-left:  180px;
+        padding-right: 180px;
+    }
+}
+
+.functioning-section {
+	margin: 51px 20px;
+    .functioning {
+        gap: 30px;
+        @media all and (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .choice {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        @media all and (min-width: 768px) {
+            width: 33%;
+        }
+        @media all and (min-width: 1025px) {
+            width: 330px;
+        }
+        .choice__cercle {
+            position: absolute;
+            background-color: $background-color_3;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            color: $color_2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .choice__text {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: $background-color_2;
+            border-radius: 20px;
+            width: 100%;
+            gap: 49px;
+            padding: 29px 0 29px 35px;
+            margin-left: 9px;
+            box-shadow: 0 4px 10px 0 #F3F3F3;
+            @media all and (min-width: 768px) {
+                padding-left: 24px;
+                padding-right: 0;
+                gap: 17px;
+            }
+            .choice__text--icon {
+                color: $color_3;
+            }
+        }
+    }
+
+}
+
+
+.Restaurant-section {
+	padding: 30px 20px 64px 20px;
+	background-color: $background-color_2;
+	h2 {
+		padding-left: 20px;
+	}
+    .Restaurant {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media all and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 49px;
+        }
+    }
+}
+
+.card {
+	position: relative;
+	height: 251px;
+	width: 100%;
+	background-color: $background-color_4;
+	border-radius: 20px;
+	padding-bottom: 17px;
+    @media all and (min-width: 768px) {
+        width: 45%;
+        max-width: 489px;
+    }
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 174px;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+    .card__content {
+        padding-left: 20px;
+        h3 {
+            margin-bottom: 5px;
+        }
+    }
+    .card__like {
+        position: absolute;
+        right: 25px;
+        bottom: 30px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card__new {
+        position: absolute;
+        right: 12px;
+        top: 13px;
+        background-color: $background-color_5;
+        height: 29px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+}
+
+
+.button__like {
+	background: none;
+	border: none;
+	font-size: 24px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+}
+
+.button__like--empty {
+    opacity: 1;
+}
+.button__like--full{
+    opacity: 0;
+}
+
+.button__like-checkbox {
+	display: none;
+	&:checked {
+		+ {
+			.button__like--empty {
+				opacity: 0;
+				+ {
+					.button__like--full {
+						opacity: 1;
+						background: linear-gradient(45deg, #9356dc, #FF79DA);
+						-webkit-background-clip: text;
+						background-clip: text;
+						color: $color_4;
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: $background-color_6;
+	padding: 30px 20px;
+	color: $color_2;
+    @media all and (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .footer__title {
+        font-family: $font-family_2;
+        font-weight: lighter;
+        color: $color_2;
+        margin: 0;
+        padding-bottom: 8px;
+        @media all and (min-width: 768px) {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 20px;
+            padding: 0;
+            padding-right: 66px;
+            width: 98px;
+        }
+        
+    }
+    .footer__text {
+        color: $color_2;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        @media all and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            padding-right: 90px;
+        }
+        @media all and (min-width: 1025px) {
+            width: 50%;
+        }
+        li {
+            display: inline-block;
+            list-style-type: none;
+        }
+    }
+}
+
+
+
+
