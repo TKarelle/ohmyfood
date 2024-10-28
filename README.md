@@ -5,7 +5,6 @@ OhMyFood est une application de commande de repas en ligne. Elle permet aux util
 
 ### Structure du projet
 
-- **Dossier CSS** : Un nouveau dossier `css/` a été ajouté pour contenir tous les fichiers de style de l'application.
 - **Fonctionnalités** :
   - Consultation des menus
   - Sélection des plats
