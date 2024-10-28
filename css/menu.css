@@ -94,7 +94,7 @@
 }
 @media all and (min-width: 767.98px) {
   .main__section .main__title {
-    width: 62%;
+    width: 58%;
     text-align: right;
   }
 }
@@ -106,7 +106,7 @@
 @media all and (min-width: 767.98px) {
   .main__section .main__like {
     position: absolute;
-    right: 34%;
+    right: 39%;
   }
 }
 .main__section .main__like .button__like {
