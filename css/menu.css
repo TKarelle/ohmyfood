@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/* Animation @keyframes pour l'apparition */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    /* Rendre visible */
+    transform: translateY(0);
+    /* Réinitialiser la translation */
+  }
+}
+/* Définir des délais d'animation pour chaque article */
+/*******TABLETTE********/
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.nav .nav__icon {
+  position: absolute;
+  left: 23px;
+  font-size: 20px;
+}
+.nav .nav__logo {
+  height: 22px;
+}
+
+.main__div {
+  position: relative;
+  width: 100%;
+}
+@media all and (min-width: 768px) {
+  .main__div {
+    position: relative;
+    width: 100%;
+  }
+}
+.main__div .main__bigpicture {
+  position: absolute;
+  top: -220px;
+  height: 258px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+@media all and (min-width: 767.98px) {
+  .main__div .main__bigpicture {
+    position: absolute;
+    top: -343px;
+    height: 383px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.main__section {
+  position: relative;
+  margin-top: 220px;
+  background-color: #F3F3F3;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 50px 20px;
+  z-index: 2;
+}
+@media all and (min-width: 767.98px) {
+  .main__section {
+    position: relative;
+    margin-top: 343px;
+    max-width: 1024px;
+    background-color: #F3F3F3;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 40px 16px;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.main__section .main__section__title {
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+.main__section .main__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  padding: 0;
+  margin-bottom: 37px;
+  width: 70%;
+}
+@media all and (min-width: 767.98px) {
+  .main__section .main__title {
+    width: 62%;
+    text-align: right;
+  }
+}
+.main__section .main__like {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+@media all and (min-width: 767.98px) {
+  .main__section .main__like {
+    position: absolute;
+    right: 34%;
+  }
+}
+.main__section .main__like .button__like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.menu .menu__title {
+  border-bottom: solid 3px #99E2D0;
+  padding-bottom: 9px;
+  width: 40px;
+}
+
+.menu__card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  gap: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;
+}
+.menu__card h3 {
+  margin: 0;
+}
+.menu__card:hover .fa-circle-check {
+  transform: translateX(0);
+}
+.menu__card:hover .card__prix {
+  transform: translateX(-60px);
+}
+.menu__card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.menu__card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.menu__card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.menu__card:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+.card__text {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 12px;
+  width: 100%;
+}
+.card__text .card__text--left {
+  display: inline-block;
+  align-items: center;
+  flex-direction: column;
+  justify-content: left;
+  width: 80%;
+  padding: 12px;
+}
+.card__text .card__text--left p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.card__text .card__text--right {
+  display: flex;
+  position: relative;
+  justify-content: right;
+  align-items: end;
+  width: 15%;
+}
+.card__text .card__text--right h3 {
+  font-size: 14px;
+}
+.card__text .card__prix {
+  padding-right: 16px;
+  padding-bottom: 16px;
+  transition: transform 0.5s ease-in-out;
+}
+.card__text .fa-circle-check {
+  position: absolute;
+  padding: 24px 20px;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 20px;
+  transform: translateX(60px);
+  transition: transform 0.5s ease-in-out;
+}
+
+.main__cta {
+  display: flex;
+  justify-content: center;
+}
+.main__cta .cta {
+  margin: 0;
+  padding: 16px 49px;
+}/*# sourceMappingURL=menu.css.map */
