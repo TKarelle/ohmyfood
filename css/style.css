@@ -64,6 +64,7 @@ body {
   z-index: 9999;
   animation: fadeOut 3s forwards;
 }
+
 .loader__spinner {
   border: 8px solid rgba(255, 255, 255, 0.3);
   border-top: 8px solid #9356dc;
@@ -152,7 +153,6 @@ header .header__logo {
 .cta:hover {
   cursor: pointer;
   opacity: 0.88;
-  box-shadow: 0 4px 10px 0 #afafaf;
 }
 
 @media all and (min-width: 1025px) {

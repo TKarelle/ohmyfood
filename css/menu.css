@@ -45,7 +45,7 @@
      object-fit: cover;
   z-index: 1;
 }
-@media all and (min-width: 767.98px) {
+@media all and (min-width: 768px) {
   .main__div .main__bigpicture {
     position: absolute;
     top: -343px;
@@ -66,16 +66,11 @@
   padding: 50px 20px;
   z-index: 2;
 }
-@media all and (min-width: 767.98px) {
+@media all and (min-width: 768px) {
   .main__section {
-    position: relative;
     margin-top: 343px;
     max-width: 1024px;
-    background-color: #F3F3F3;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
     padding: 40px 16px;
-    z-index: 2;
     margin-left: auto;
     margin-right: auto;
   }
@@ -92,7 +87,7 @@
   margin-bottom: 37px;
   width: 70%;
 }
-@media all and (min-width: 767.98px) {
+@media all and (min-width: 768px) {
   .main__section .main__title {
     width: 58%;
     text-align: right;
@@ -103,7 +98,7 @@
   right: 20px;
   top: 30px;
 }
-@media all and (min-width: 767.98px) {
+@media all and (min-width: 768px) {
   .main__section .main__like {
     position: absolute;
     right: 39%;
@@ -173,6 +168,7 @@
   justify-content: left;
   width: 80%;
   padding: 12px;
+  z-index: 1;
 }
 .card__text .card__text--left p {
   font-size: 14px;
@@ -191,6 +187,9 @@
 .card__text .card__prix {
   padding-right: 16px;
   padding-bottom: 16px;
+  padding-left: 7px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
   transition: transform 0.5s ease-in-out;
 }
 .card__text .fa-circle-check {
