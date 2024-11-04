@@ -12,7 +12,9 @@ $background-color_4: #d5d5d5;
 $background-color_5: #99E2D0;
 $background-color_6: black;
 
-$shadow-light_cta: 0 4px 10px rgba(0, 0, 0, 0.3);
+@mixin shadow-light_cta{ box-shadow:  0 4px 10px rgba(0, 0, 0, 0.3);}
+@mixin shadow-light{ box-shadow: 0 4px 10px 0 #F3F3F3;}
+@mixin shadow-header { box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
 
 /* Animation de rotation */
 @keyframes spin {
@@ -76,12 +78,8 @@ body {
 	align-items: center;
 	z-index: 9999;
 	animation: fadeOut 3s forwards;
-	&:target {
-		+ {
-			display: block;
-		}
-	}
 }
+
 .loader__spinner {
 	border: 8px solid rgba(255, 255, 255, 0.3);
 	border-top: 8px solid #9356dc;
@@ -100,7 +98,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	height: 63px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	@include shadow-header;
 	margin-bottom: 5px;
     .header__logo{
         height: 30px;
@@ -113,7 +111,7 @@ header {
 	align-items: center;
 	text-align: center;
 	background-color: $background-color_2;
-	box-shadow: $shadow-light_cta;
+	@include shadow-light_cta;
 	height: 49px;
 	margin-bottom: 10px;
     .searchbar__text {
@@ -155,7 +153,7 @@ header {
     color: $color_2;
     border-radius: 50px;
     padding: 15px 23px;
-    box-shadow: $shadow-light_cta;
+    @include shadow-light_cta;
     overflow: hidden;
     margin-bottom: 57px;
     margin-top: 27px;
@@ -164,7 +162,6 @@ header {
     &:hover {
         cursor: pointer;
         opacity: 0.88;
-        box-shadow: 0 4px 10px 0 #afafaf;
     }
 }
 
@@ -217,7 +214,7 @@ header {
             gap: 49px;
             padding: 29px 0 29px 35px;
             margin-left: 9px;
-            box-shadow: 0 4px 10px 0 #F3F3F3;
+            @include shadow-light;
             @media all and (min-width: 768px) {
                 padding-left: 24px;
                 padding-right: 0;
@@ -331,7 +328,7 @@ header {
 				+ {
 					.button__like--full {
 						opacity: 1;
-						background: linear-gradient(45deg, #9356dc, #FF79DA);
+						background: linear-gradient(45deg, $color_3, $color_5);
 						-webkit-background-clip: text;
 						background-clip: text;
 						color: $color_4;
